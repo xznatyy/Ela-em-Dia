@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fdf7f7;
+    color: #444;
+}
+
+header {
+    background-color: white;
+    padding: 20px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #eee;
+}
+
+header h1 {
+    color: #e87f82;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #555;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #e87f82;
+}
+
+main {
+    width: 85%;
+    max-width: 850px;
+    margin: 40px auto;
+}
+
+.titulo {
+    margin-bottom: 30px;
+}
+
+.titulo h2 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.titulo p {
+    color: #777;
+}
+
+.card-status,
+.cadastro,
+.aviso {
+    background-color: white;
+
+    padding: 30px;
+    margin-bottom: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.card-status {
+    text-align: center;
+}
+
+.card-status p {
+    color: #777;
+}
+
+.card-status h2 {
+    margin: 15px 0;
+    color: #e87f82;
+}
+
+button {
+    padding: 11px 20px;
+
+    background-color: #e87f82;
+    color: white;
+
+    border: none;
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #dc7074;
+}
+
+#statusDose {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.cadastro h3 {
+    color: #e87f82;
+    margin-bottom: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 7px;
+}
+
+input {
+    padding: 12px;
+    margin-bottom: 18px;
+
+    border: 1px solid #ddd;
+    border-radius: 5px;
+
+    background-color: #f8f8f8;
+
+    outline: none;
+}
+
+input:focus {
+    border-color: #e87f82;
+}
+
+form button {
+    width: 130px;
+}
+
+.aviso {
+    background-color: #f6dddd;
+}
+
+.aviso h3 {
+    color: #d96d72;
+    margin-bottom: 10px;
+}
+
+.aviso p {
+    line-height: 1.5;
+}

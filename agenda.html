@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Agenda - Ela em Dia</title>
+
+    <link rel="stylesheet" href="css/agenda.css">
+    <link rel="stylesheet" href="css/global.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <span class="logo-simbolo">♡</span>
+        <h1>Ela em Dia</h1>
+    </div>
+
+    <nav id="menuNav">
+        <a href="home.html">Início</a>
+        <a href="ciclo.html">Meu ciclo</a>
+        <a href="anticoncepcional.html">Anticoncepcional</a>
+        <a href="agenda.html">Agenda</a>
+        <a href="sintomas.html">Sintomas</a>
+        <a href="minha-saude.html">Minha saúde</a>
+    </nav>
+
+    <div class="header-acoes">
+
+        <button
+            class="tema-botao"
+            id="temaBotao"
+            aria-label="Alterar tema">
+            🌙
+        </button>
+
+        <button
+            class="menu-botao"
+            id="menuBotao"
+            aria-label="Abrir menu">
+            ☰
+        </button>
+
+    </div>
+
+</header>
+<main>
+
+    <section class="titulo">
+        <h2>Minha Agenda 📅</h2>
+        <p>Organize suas consultas, exames e compromissos de saúde.</p>
+    </section>
+
+    <section class="novo-compromisso">
+
+        <h3>Novo compromisso</h3>
+
+        <form id="formAgenda">
+
+            <label for="tipo">Tipo</label>
+
+            <select id="tipo" required>
+                <option value="">Selecione</option>
+                <option value="Consulta">Consulta</option>
+                <option value="Exame">Exame</option>
+                <option value="Vacina">Vacina</option>
+                <option value="Outro">Outro</option>
+            </select>
+
+            <label for="tituloCompromisso">Descrição</label>
+
+            <input
+                type="text"
+                id="tituloCompromisso"
+                placeholder="Ex: Consulta com ginecologista"
+                required
+            >
+
+            <label for="data">Data</label>
+
+            <input
+                type="date"
+                id="data"
+                required
+            >
+
+            <label for="hora">Horário</label>
+
+            <input
+                type="time"
+                id="hora"
+                required
+            >
+
+            <label for="local">Local</label>
+
+            <input
+                type="text"
+                id="local"
+                placeholder="Ex: Clínica, UBS, hospital..."
+            >
+
+            <label for="observacao">Observações</label>
+
+            <textarea
+                id="observacao"
+                placeholder="Adicione alguma observação..."
+            ></textarea>
+
+            <button type="submit">
+                Salvar compromisso
+            </button>
+
+        </form>
+
+    </section>
+
+    <section class="proximos">
+
+        <h3>Próximos compromissos</h3>
+
+        <div id="listaCompromissos"></div>
+
+    </section>
+
+</main>
+
+<script src="js/agenda.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/tema.js"></script>
+
+</body>
+</html>

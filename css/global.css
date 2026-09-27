@@ -1,0 +1,501 @@
+:root {
+    --rosa-principal: #4f7c76;
+    --rosa-escuro: #345f5a;
+    --rosa-claro: #dcebe7;
+    --rosa-suave: #f0f7f5;
+
+    --vinho: #2f5d62;
+
+    --fundo: #f7faf9;
+    --branco: #ffffff;
+
+    --texto: #303837;
+    --texto-claro: #707c79;
+
+    --borda: #dce6e3;
+
+    --sombra: 0 8px 25px rgba(47, 93, 98, 0.08);
+}
+
+html[data-theme="dark"] {
+    --rosa-principal: #81b8ae;
+    --rosa-escuro: #9bcac2;
+    --rosa-claro: #263d39;
+    --rosa-suave: #1d302d;
+
+    --vinho: #a6d6ce;
+
+    --fundo: #111817;
+    --branco: #18211f;
+
+    --texto: #edf3f1;
+    --texto-claro: #a7b5b2;
+
+    --borda: #2c3c39;
+
+    --sombra: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+/* GERAL */
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #fbe9ef 0%,
+            transparent 35%
+        ),
+        var(--fundo);
+
+    color: var(--texto);
+}
+
+
+/* CABEÇALHO */
+
+header {
+    background-color: rgba(255, 255, 255, 0.95);
+
+    padding: 18px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid var(--borda);
+
+    box-shadow: 0 2px 12px rgba(111, 52, 73, 0.04);
+}
+
+header h1 {
+    color: var(--rosa-principal);
+
+    font-size: 26px;
+
+    font-weight: 700;
+
+    letter-spacing: -1px;
+}
+
+
+/* MENU */
+
+nav {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+
+    color: var(--texto-claro);
+
+    font-size: 14px;
+    font-weight: 500;
+
+    padding: 8px 12px;
+
+    border-radius: 20px;
+
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: var(--rosa-principal);
+
+    background-color: var(--rosa-suave);
+}
+
+
+/* CONTEÚDO */
+
+main {
+    width: 88%;
+    max-width: 1050px;
+
+    margin: 45px auto;
+}
+
+
+/* TÍTULOS */
+
+.titulo h2,
+.boas-vindas h2 {
+    color: var(--vinho);
+
+    font-size: 30px;
+
+    margin-bottom: 7px;
+}
+
+.titulo p,
+.boas-vindas p {
+    color: var(--texto-claro);
+}
+
+
+/* CARDS */
+
+.card,
+.info,
+.registro,
+.novo-compromisso,
+.proximos,
+.formulario,
+.card-status,
+.cadastro,
+.historico {
+
+    background-color: var(--branco);
+
+    border: 1px solid var(--borda);
+
+    border-radius: 18px;
+
+    box-shadow: var(--sombra);
+}
+
+
+/* CARDS DA HOME */
+
+.card {
+    padding: 25px;
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(111, 52, 73, 0.12);
+}
+
+.card h3 {
+    color: var(--rosa-principal);
+}
+
+.card strong {
+    color: var(--vinho);
+}
+
+
+/* FORMULÁRIOS */
+
+input,
+select,
+textarea {
+    background-color: #fdf9fa !important;
+
+    border: 1px solid var(--borda) !important;
+
+    border-radius: 9px !important;
+
+    color: var(--texto);
+
+    transition: 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--rosa-principal) !important;
+
+    box-shadow:
+        0 0 0 3px rgba(184, 92, 122, 0.10);
+
+    outline: none;
+}
+
+label {
+    color: var(--texto);
+
+    font-weight: 500;
+}
+
+
+/* BOTÕES */
+
+button {
+    background-color: var(--rosa-principal) !important;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 9px !important;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: var(--rosa-escuro) !important;
+
+    transform: translateY(-1px);
+}
+
+
+/* DICA DO DIA */
+
+.dica {
+    background:
+    linear-gradient(
+        135deg,
+        var(--rosa-claro),
+        var(--rosa-suave)
+    );
+
+    border: 1px solid var(--borda);
+
+    border-radius: 18px;
+
+    color: var(--texto);
+}
+
+.dica h3 {
+    color: var(--vinho);
+}
+
+
+/* HISTÓRICOS */
+
+.compromisso,
+.registro-sintoma,
+.ciclo-item {
+    background-color: var(--rosa-suave) !important;
+
+    border-left:
+        4px solid var(--rosa-principal) !important;
+
+    border-radius: 10px !important;
+}
+
+
+/* RESPONSIVO */
+
+@media (max-width: 800px) {
+
+    header {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    main {
+        width: 92%;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    nav {
+        gap: 4px;
+    }
+
+    nav a {
+        font-size: 12px;
+
+        padding: 7px 9px;
+    }
+
+    .titulo h2,
+    .boas-vindas h2 {
+        font-size: 25px;
+    }
+
+}
+
+.login-card,
+.cadastro-card {
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 15px 45px rgba(111, 52, 73, 0.15);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.8);
+}
+
+.login-card h1,
+.cadastro-card h1 {
+
+    color: var(--rosa-principal);
+
+    font-size: 32px;
+
+    letter-spacing: -1px;
+}
+
+.menu-botao {
+    display: none;
+
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+
+    background-color: var(--rosa-suave) !important;
+    color: var(--rosa-principal);
+
+    border-radius: 10px !important;
+}
+
+.menu-botao:hover {
+    background-color: var(--rosa-claro) !important;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 800px) {
+
+    header {
+        position: relative;
+
+        flex-direction: row;
+
+        justify-content: space-between;
+
+        padding: 15px 6%;
+    }
+
+    .menu-botao {
+        display: flex;
+    }
+
+    nav {
+        display: none;
+
+        position: absolute;
+
+        top: 75px;
+        left: 5%;
+        right: 5%;
+
+        z-index: 1000;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 5px;
+
+        padding: 15px;
+
+        background-color: white;
+
+        border: 1px solid var(--borda);
+        border-radius: 15px;
+
+        box-shadow:
+            0 15px 40px rgba(111, 52, 73, 0.15);
+    }
+
+    nav.aberto {
+        display: flex;
+    }
+
+    nav a {
+        width: 100%;
+
+        padding: 12px 15px;
+
+        border-radius: 9px;
+    }
+
+    nav a:hover {
+        background-color: var(--rosa-suave);
+    }
+
+}
+
+html[data-theme="dark"] body {
+    background: var(--fundo) !important;
+}
+
+html[data-theme="dark"] header,
+html[data-theme="dark"] .card,
+html[data-theme="dark"] .info,
+html[data-theme="dark"] .registro,
+html[data-theme="dark"] .novo-compromisso,
+html[data-theme="dark"] .proximos,
+html[data-theme="dark"] .formulario,
+html[data-theme="dark"] .card-status,
+html[data-theme="dark"] .cadastro,
+html[data-theme="dark"] .historico,
+html[data-theme="dark"] .acao,
+html[data-theme="dark"] .login-card,
+html[data-theme="dark"] .cadastro-card {
+    background-color: var(--branco) !important;
+}
+
+html[data-theme="dark"] input,
+html[data-theme="dark"] select,
+html[data-theme="dark"] textarea {
+    background-color: #202b29 !important;
+    color: var(--texto) !important;
+}
+
+html[data-theme="dark"] input::placeholder,
+html[data-theme="dark"] textarea::placeholder {
+    color: #80908c;
+}
+
+html[data-theme="dark"] nav {
+    background-color: var(--branco);
+}
+
+.header-acoes {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tema-botao {
+    width: 42px;
+    height: 42px;
+
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--rosa-suave) !important;
+    color: var(--texto);
+
+    border: 1px solid var(--borda);
+
+    border-radius: 50% !important;
+
+    font-size: 18px;
+
+    cursor: pointer;
+}
+
+.tema-botao:hover {
+    background-color: var(--rosa-claro) !important;
+}

@@ -1,0 +1,399 @@
+/* HEADER */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-simbolo {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--rosa-claro);
+    color: var(--rosa-principal);
+
+    border-radius: 50%;
+
+    font-size: 20px;
+}
+
+nav .ativo {
+    background-color: var(--rosa-suave);
+    color: var(--rosa-principal);
+}
+
+
+/* BOAS-VINDAS */
+
+.boas-vindas {
+    min-height: 220px;
+
+    padding: 40px;
+
+    margin-bottom: 45px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+ background:
+    linear-gradient(
+        135deg,
+        var(--rosa-claro),
+        var(--rosa-suave)
+    );
+
+    border: 1px solid var(--borda);
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+.mini-texto {
+    color: var(--rosa-principal);
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+}
+
+.boas-vindas h2 {
+    margin-top: 10px;
+
+    font-size: 38px;
+
+    color: var(--vinho);
+}
+
+.boas-vindas p {
+    max-width: 470px;
+
+    margin-top: 10px;
+
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.decoracao {
+    width: 130px;
+    height: 130px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color:
+        rgba(255, 255, 255, 0.55);
+
+    color: var(--rosa-principal);
+
+    font-size: 70px;
+}
+
+
+/* SEÇÕES */
+
+.secao {
+    margin-bottom: 45px;
+}
+
+.titulo-secao {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.titulo-secao h2 {
+    color: var(--vinho);
+
+    font-size: 23px;
+
+    margin-bottom: 5px;
+}
+
+.titulo-secao p {
+    color: var(--texto-claro);
+
+    font-size: 14px;
+}
+
+
+/* CARDS */
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.card {
+    min-height: 260px;
+
+    padding: 22px;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+}
+
+.icone-card {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--rosa-suave);
+
+    border-radius: 13px;
+
+    margin-bottom: 20px;
+
+    font-size: 20px;
+}
+
+.card-conteudo {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-categoria {
+    color: var(--rosa-principal);
+
+    font-weight: bold;
+
+    font-size: 14px;
+
+    margin-bottom: 12px;
+}
+
+.card p {
+    font-size: 13px;
+
+    color: var(--texto-claro);
+
+    margin-bottom: 7px;
+
+    line-height: 1.4;
+}
+
+.card strong {
+    font-size: 17px;
+
+    line-height: 1.4;
+}
+
+.status {
+    font-size: 12px;
+
+    color: var(--rosa-principal);
+
+    margin-top: 8px;
+}
+
+.card button {
+    width: 100%;
+
+    margin-top: auto;
+
+    padding: 10px;
+}
+
+
+/* ACESSOS RÁPIDOS */
+
+.acoes {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 15px;
+}
+
+.acao {
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+
+    padding: 20px;
+
+    background-color: white;
+
+    border: 1px solid var(--borda);
+
+    border-radius: 15px;
+
+    box-shadow: var(--sombra);
+
+    text-decoration: none;
+
+    color: var(--texto);
+
+    transition: 0.2s;
+}
+
+.acao:hover {
+    transform: translateY(-3px);
+
+    border-color: var(--rosa-claro);
+}
+
+.acao > span {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--rosa-suave);
+
+    border-radius: 12px;
+
+    font-size: 20px;
+}
+
+.acao strong {
+    color: var(--vinho);
+
+    display: block;
+
+    margin-bottom: 4px;
+}
+
+.acao p {
+    color: var(--texto-claro);
+
+    font-size: 13px;
+}
+
+
+/* DICA */
+
+.dica {
+    display: flex;
+
+    gap: 20px;
+
+    padding: 28px;
+
+    margin-bottom: 50px;
+}
+
+.icone-dica {
+    width: 48px;
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: white;
+
+    border-radius: 50%;
+
+    color: var(--rosa-principal);
+
+    font-size: 22px;
+}
+
+.dica span {
+    color: var(--rosa-principal);
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 1.4px;
+}
+
+.dica h3 {
+    margin: 7px 0;
+
+    font-size: 19px;
+}
+
+.dica p {
+    color: var(--texto-claro);
+
+    line-height: 1.6;
+
+    font-size: 14px;
+}
+
+
+/* RODAPÉ */
+
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    border-top: 1px solid var(--borda);
+
+    color: var(--texto-claro);
+
+    font-size: 13px;
+}
+
+
+/* TABLET */
+
+@media (max-width: 950px) {
+
+    .cards {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    .boas-vindas {
+        padding: 28px;
+
+        min-height: auto;
+    }
+
+    .boas-vindas h2 {
+        font-size: 30px;
+    }
+
+    .decoracao {
+        display: none;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .acoes {
+        grid-template-columns: 1fr;
+    }
+
+}

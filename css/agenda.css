@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fdf7f7;
+    color: #444;
+}
+
+header {
+    background-color: white;
+
+    padding: 20px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #eee;
+}
+
+header h1 {
+    color: #e87f82;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+}
+
+nav a:hover {
+    color: #e87f82;
+}
+
+main {
+    width: 85%;
+    max-width: 900px;
+
+    margin: 40px auto;
+}
+
+.titulo {
+    margin-bottom: 30px;
+}
+
+.titulo h2 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.titulo p {
+    color: #777;
+}
+
+.novo-compromisso,
+.proximos {
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    margin-bottom: 25px;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.novo-compromisso h3,
+.proximos h3 {
+    color: #e87f82;
+    margin-bottom: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 7px;
+}
+
+input,
+select,
+textarea {
+    padding: 12px;
+
+    margin-bottom: 18px;
+
+    border: 1px solid #ddd;
+    border-radius: 5px;
+
+    background-color: #f8f8f8;
+
+    outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #e87f82;
+}
+
+textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+button {
+    padding: 11px 20px;
+
+    background-color: #e87f82;
+    color: white;
+
+    border: none;
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #dc7074;
+}
+
+form button {
+    width: 180px;
+}
+
+.compromisso {
+    background-color: #fff7f7;
+
+    padding: 18px;
+
+    margin-bottom: 15px;
+
+    border-left: 4px solid #e87f82;
+
+    border-radius: 8px;
+}
+
+.compromisso h4 {
+    margin-bottom: 8px;
+    color: #e87f82;
+}
+
+.compromisso p {
+    margin-bottom: 5px;
+}
+
+.botao-excluir {
+    margin-top: 10px;
+
+    background-color: #d96d72;
+
+    padding: 8px 14px;
+}

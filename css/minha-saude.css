@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fdf7f7;
+    color: #444;
+}
+
+header {
+    background-color: white;
+    padding: 20px 8%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #eee;
+}
+
+header h1 {
+    color: #e87f82;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #555;
+}
+
+nav a:hover {
+    color: #e87f82;
+}
+
+main {
+    width: 85%;
+    max-width: 850px;
+    margin: 40px auto;
+}
+
+.titulo {
+    margin-bottom: 30px;
+}
+
+.titulo h2 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.titulo p {
+    color: #777;
+}
+
+.formulario {
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 7px;
+}
+
+select,
+textarea {
+    padding: 12px;
+
+    margin-bottom: 20px;
+
+    border: 1px solid #ddd;
+    border-radius: 5px;
+
+    background-color: #f8f8f8;
+
+    outline: none;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+select:focus,
+textarea:focus {
+    border-color: #e87f82;
+}
+
+button {
+    width: 180px;
+
+    padding: 11px;
+
+    background-color: #e87f82;
+    color: white;
+
+    border: none;
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #dc7074;
+}
+
+#mensagem {
+    margin-top: 20px;
+    color: #d96d72;
+    font-weight: bold;
+}

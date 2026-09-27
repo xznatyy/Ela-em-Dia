@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sintomas - Ela em Dia</title>
+
+    <link rel="stylesheet" href="css/sintomas.css">
+    <link rel="stylesheet" href="css/global.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <span class="logo-simbolo">♡</span>
+        <h1>Ela em Dia</h1>
+    </div>
+
+    <nav id="menuNav">
+        <a href="home.html">Início</a>
+        <a href="ciclo.html">Meu ciclo</a>
+        <a href="anticoncepcional.html">Anticoncepcional</a>
+        <a href="agenda.html">Agenda</a>
+        <a href="sintomas.html">Sintomas</a>
+        <a href="minha-saude.html">Minha saúde</a>
+    </nav>
+
+    <div class="header-acoes">
+
+        <button
+            class="tema-botao"
+            id="temaBotao"
+            aria-label="Alterar tema">
+            🌙
+        </button>
+
+        <button
+            class="menu-botao"
+            id="menuBotao"
+            aria-label="Abrir menu">
+            ☰
+        </button>
+
+    </div>
+
+</header>
+<main>
+
+    <section class="titulo">
+        <h2>Como você está hoje? 🌷</h2>
+        <p>Registre seus sintomas e acompanhe como seu corpo se sente ao longo do tempo.</p>
+    </section>
+
+    <section class="registro">
+
+        <form id="formSintomas">
+
+            <h3>Sintomas</h3>
+
+            <div class="opcoes">
+
+                <label>
+                    <input type="checkbox" value="Cólica">
+                    Cólica
+                </label>
+
+                <label>
+                    <input type="checkbox" value="Dor de cabeça">
+                    Dor de cabeça
+                </label>
+
+                <label>
+                    <input type="checkbox" value="Cansaço">
+                    Cansaço
+                </label>
+
+                <label>
+                    <input type="checkbox" value="Inchaço">
+                    Inchaço
+                </label>
+
+                <label>
+                    <input type="checkbox" value="Dor nas costas">
+                    Dor nas costas
+                </label>
+
+                <label>
+                    <input type="checkbox" value="Sensibilidade">
+                    Sensibilidade
+                </label>
+
+            </div>
+
+            <label for="humor">Humor</label>
+
+            <select id="humor">
+                <option value="">Selecione</option>
+                <option>Feliz</option>
+                <option>Tranquila</option>
+                <option>Cansada</option>
+                <option>Irritada</option>
+                <option>Triste</option>
+                <option>Ansiosa</option>
+            </select>
+
+            <label for="dor">Nível de desconforto</label>
+
+            <input
+                type="range"
+                id="dor"
+                min="0"
+                max="10"
+                value="0"
+            >
+
+            <p>
+                Nível: <span id="nivelDor">0</span>/10
+            </p>
+
+            <label for="observacao">Observações</label>
+
+            <textarea
+                id="observacao"
+                placeholder="Escreva algo que percebeu hoje..."
+            ></textarea>
+
+            <button type="submit">
+                Salvar registro
+            </button>
+
+        </form>
+
+        <p id="mensagem"></p>
+
+    </section>
+
+    <section class="historico">
+
+        <h3>Registros recentes</h3>
+
+        <div id="listaSintomas"></div>
+
+    </section>
+
+</main>
+
+<script src="js/sintomas.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/tema.js"></script>
+
+</body>
+</html>

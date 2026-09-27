@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meu Anticoncepcional - Ela em Dia</title>
+
+    <link rel="stylesheet" href="css/anticoncepcional.css">
+    <link rel="stylesheet" href="css/global.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <span class="logo-simbolo">♡</span>
+        <h1>Ela em Dia</h1>
+    </div>
+
+    <nav id="menuNav">
+        <a href="home.html">Início</a>
+        <a href="ciclo.html">Meu ciclo</a>
+        <a href="anticoncepcional.html">Anticoncepcional</a>
+        <a href="agenda.html">Agenda</a>
+        <a href="sintomas.html">Sintomas</a>
+        <a href="minha-saude.html">Minha saúde</a>
+    </nav>
+
+    <div class="header-acoes">
+
+        <button
+            class="tema-botao"
+            id="temaBotao"
+            aria-label="Alterar tema">
+            🌙
+        </button>
+
+        <button
+            class="menu-botao"
+            id="menuBotao"
+            aria-label="Abrir menu">
+            ☰
+        </button>
+
+    </div>
+
+</header>
+
+<main>
+
+    <section class="titulo">
+        <h2>Meu Anticoncepcional 💊</h2>
+        <p>Organize e acompanhe sua rotina diária.</p>
+    </section>
+
+    <section class="card-status">
+
+        <p>Próxima dose</p>
+
+        <h2 id="horarioExibido">Nenhum horário cadastrado</h2>
+
+        <button id="botaoTomei">
+            Tomei hoje ✓
+        </button>
+
+        <p id="statusDose"></p>
+
+    </section>
+
+    <section class="cadastro">
+
+        <h3>Cadastrar anticoncepcional</h3>
+
+        <form id="formAnticoncepcional">
+
+            <label for="nomeMedicamento">
+                Nome
+            </label>
+
+            <input
+                type="text"
+                id="nomeMedicamento"
+                placeholder="Ex: Nome do anticoncepcional"
+                required
+            >
+
+            <label for="horario">
+                Horário diário
+            </label>
+
+            <input
+                type="time"
+                id="horario"
+                required
+            >
+
+            <button type="submit">
+                Salvar
+            </button>
+
+        </form>
+
+    </section>
+
+    <section class="aviso">
+
+        <h3>Importante</h3>
+
+        <p>
+            As orientações em caso de esquecimento podem variar
+            conforme o medicamento. Consulte a bula ou um
+            profissional de saúde.
+        </p>
+
+    </section>
+
+</main>
+
+<script src="js/anticoncepcional.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/tema.js"></script>
+
+</body>
+</html>

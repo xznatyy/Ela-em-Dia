@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Minha Saúde - Ela em Dia</title>
+
+    <link rel="stylesheet" href="css/minha-saude.css">
+    <link rel="stylesheet" href="css/global.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <span class="logo-simbolo">♡</span>
+        <h1>Ela em Dia</h1>
+    </div>
+
+    <nav id="menuNav">
+        <a href="home.html">Início</a>
+        <a href="ciclo.html">Meu ciclo</a>
+        <a href="anticoncepcional.html">Anticoncepcional</a>
+        <a href="agenda.html">Agenda</a>
+        <a href="sintomas.html">Sintomas</a>
+        <a href="minha-saude.html">Minha saúde</a>
+    </nav>
+
+    <div class="header-acoes">
+
+        <button
+            class="tema-botao"
+            id="temaBotao"
+            aria-label="Alterar tema">
+            🌙
+        </button>
+
+        <button
+            class="menu-botao"
+            id="menuBotao"
+            aria-label="Abrir menu">
+            ☰
+        </button>
+
+    </div>
+
+</header>
+
+<main>
+
+    <section class="titulo">
+        <h2>Minha Saúde 🌷</h2>
+        <p>Mantenha suas principais informações de saúde organizadas.</p>
+    </section>
+
+    <section class="formulario">
+
+        <form id="formSaude">
+
+            <label for="tipoSanguineo">Tipo sanguíneo</label>
+
+            <select id="tipoSanguineo">
+                <option value="">Não informado</option>
+                <option>A+</option>
+                <option>A-</option>
+                <option>B+</option>
+                <option>B-</option>
+                <option>AB+</option>
+                <option>AB-</option>
+                <option>O+</option>
+                <option>O-</option>
+            </select>
+
+            <label for="alergias">Alergias</label>
+
+            <textarea
+                id="alergias"
+                placeholder="Ex: alergia a algum medicamento..."
+            ></textarea>
+
+            <label for="medicamentos">Medicamentos em uso</label>
+
+            <textarea
+                id="medicamentos"
+                placeholder="Informe medicamentos que utiliza atualmente..."
+            ></textarea>
+
+            <label for="historico">Informações importantes</label>
+
+            <textarea
+                id="historico"
+                placeholder="Adicione informações que considere importantes para sua saúde..."
+            ></textarea>
+
+            <button type="submit">
+                Salvar informações
+            </button>
+
+        </form>
+
+        <p id="mensagem"></p>
+
+    </section>
+
+</main>
+
+<script src="js/minha-saude.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/tema.js"></script>
+
+</body>
+</html>

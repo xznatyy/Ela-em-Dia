@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ela em Dia - Início</title>
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <span class="logo-simbolo">♡</span>
+        <h1>Ela em Dia</h1>
+    </div>
+
+    <nav id="menuNav">
+        <a href="home.html">Início</a>
+        <a href="ciclo.html">Meu ciclo</a>
+        <a href="anticoncepcional.html">Anticoncepcional</a>
+        <a href="agenda.html">Agenda</a>
+        <a href="sintomas.html">Sintomas</a>
+        <a href="minha-saude.html">Minha saúde</a>
+    </nav>
+
+    <div class="header-acoes">
+
+        <button
+            class="tema-botao"
+            id="temaBotao"
+            aria-label="Alterar tema">
+            🌙
+        </button>
+
+        <button
+            class="menu-botao"
+            id="menuBotao"
+            aria-label="Abrir menu">
+            ☰
+        </button>
+
+    </div>
+
+</header>
+<main>
+
+    <!-- BOAS-VINDAS -->
+
+    <section class="boas-vindas">
+
+        <div>
+            <span class="mini-texto">SEU ESPAÇO DE CUIDADO</span>
+
+            <h2>Olá! 🌷</h2>
+
+            <p>
+                Acompanhe sua saúde, seus registros
+                e sua rotina em um só lugar.
+            </p>
+        </div>
+
+        <div class="decoracao">
+            ♡
+        </div>
+
+    </section>
+
+
+    <!-- RESUMO -->
+
+    <section class="secao">
+
+        <div class="titulo-secao">
+            <div>
+                <h2>Resumo de hoje</h2>
+                <p>Veja rapidamente seus principais registros.</p>
+            </div>
+        </div>
+
+
+        <div class="cards">
+
+
+            <!-- CICLO -->
+
+            <div class="card">
+
+                <div class="icone-card">
+                    🩸
+                </div>
+
+                <div class="card-conteudo">
+
+                    <span class="card-categoria">
+                        Meu ciclo
+                    </span>
+
+                    <p>
+                        Próxima menstruação estimada
+                    </p>
+
+                    <strong id="homeCiclo">
+                        Dados insuficientes
+                    </strong>
+
+                </div>
+
+                <button
+                    onclick="window.location.href='ciclo.html'">
+                    Ver ciclo
+                </button>
+
+            </div>
+
+
+            <!-- ANTICONCEPCIONAL -->
+
+            <div class="card">
+
+                <div class="icone-card">
+                    💊
+                </div>
+
+                <div class="card-conteudo">
+
+                    <span class="card-categoria">
+                        Anticoncepcional
+                    </span>
+
+                    <p>
+                        Próxima dose
+                    </p>
+
+                    <strong id="homeAnticoncepcional">
+                        Nenhum horário cadastrado
+                    </strong>
+
+                    <span
+                        id="homeStatusDose"
+                        class="status">
+                    </span>
+
+                </div>
+
+                <button
+                    onclick="window.location.href='anticoncepcional.html'">
+                    Ver rotina
+                </button>
+
+            </div>
+
+
+            <!-- AGENDA -->
+
+            <div class="card">
+
+                <div class="icone-card">
+                    📅
+                </div>
+
+                <div class="card-conteudo">
+
+                    <span class="card-categoria">
+                        Minha agenda
+                    </span>
+
+                    <p>
+                        Próximo compromisso
+                    </p>
+
+                    <strong id="homeAgenda">
+                        Nenhum compromisso
+                    </strong>
+
+                    <span
+                        id="homeDataAgenda"
+                        class="status">
+                    </span>
+
+                </div>
+
+                <button
+                    onclick="window.location.href='agenda.html'">
+                    Ver agenda
+                </button>
+
+            </div>
+
+
+            <!-- SINTOMAS -->
+
+            <div class="card">
+
+                <div class="icone-card">
+                    🌿
+                </div>
+
+                <div class="card-conteudo">
+
+                    <span class="card-categoria">
+                        Como estou
+                    </span>
+
+                    <p>
+                        Último registro
+                    </p>
+
+                    <strong id="homeSintomas">
+                        Nenhum registro
+                    </strong>
+
+                </div>
+
+                <button
+                    onclick="window.location.href='sintomas.html'">
+                    Registrar
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ACESSOS RÁPIDOS -->
+
+    <section class="secao">
+
+        <div class="titulo-secao">
+            <div>
+                <h2>Acessos rápidos</h2>
+                <p>O que você deseja fazer?</p>
+            </div>
+        </div>
+
+        <div class="acoes">
+
+            <a href="ciclo.html" class="acao">
+                <span>🩸</span>
+
+                <div>
+                    <strong>Registrar ciclo</strong>
+                    <p>Adicione uma nova menstruação.</p>
+                </div>
+            </a>
+
+
+            <a href="sintomas.html" class="acao">
+                <span>🌷</span>
+
+                <div>
+                    <strong>Registrar sintomas</strong>
+                    <p>Conte como você está hoje.</p>
+                </div>
+            </a>
+
+
+            <a href="agenda.html" class="acao">
+                <span>＋</span>
+
+                <div>
+                    <strong>Novo compromisso</strong>
+                    <p>Adicione consulta ou exame.</p>
+                </div>
+            </a>
+
+
+            <a href="minha-saude.html" class="acao">
+                <span>♡</span>
+
+                <div>
+                    <strong>Minha saúde</strong>
+                    <p>Veja suas informações pessoais.</p>
+                </div>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- DICA -->
+
+    <section class="dica">
+
+        <div class="icone-dica">
+            ✦
+        </div>
+
+        <div>
+            <span>DICA DO DIA</span>
+
+            <h3>Conhecer seu corpo também é cuidado.</h3>
+
+            <p>
+                Registrar sintomas e mudanças ao longo do tempo
+                pode ajudar você a organizar melhor as informações
+                sobre sua saúde.
+            </p>
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+    <p>Ela em Dia ♡ Sua saúde, sua rotina, seu cuidado.</p>
+</footer>
+
+
+<script src="js/home.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/tema.js"></script>
+
+</body>
+</html>
