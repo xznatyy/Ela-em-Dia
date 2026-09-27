@@ -6,37 +6,8 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #fdf7f7;
-    color: #444;
-}
-
-header {
-    background-color: white;
-    padding: 20px 8%;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    border-bottom: 1px solid #eee;
-}
-
-header h1 {
-    color: #e87f82;
-}
-
-nav {
-    display: flex;
-    gap: 20px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #555;
-}
-
-nav a:hover {
-    color: #e87f82;
+    background-color: var(--fundo);
+    color: var(--texto);
 }
 
 main {
@@ -45,6 +16,9 @@ main {
     margin: 40px auto;
 }
 
+
+/* TÍTULO */
+
 .titulo {
     margin-bottom: 30px;
 }
@@ -52,29 +26,52 @@ main {
 .titulo h2 {
     font-size: 30px;
     margin-bottom: 8px;
+    color: var(--vinho);
 }
 
 .titulo p {
-    color: #777;
+    color: var(--texto-claro);
 }
+
+
+/* CARDS */
 
 .registro,
 .historico {
-    background-color: white;
+    background-color: var(--branco);
 
     padding: 30px;
     margin-bottom: 25px;
 
-    border-radius: 12px;
+    border: 1px solid var(--borda);
+    border-radius: 18px;
 
-    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    box-shadow: var(--sombra);
 }
 
 .registro h3,
 .historico h3 {
-    color: #e87f82;
+    color: var(--rosa-principal);
     margin-bottom: 20px;
 }
+
+
+/* FORMULÁRIO */
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form > label {
+    margin-bottom: 7px;
+
+    color: var(--texto);
+    font-weight: 500;
+}
+
+
+/* OPÇÕES DE SINTOMAS */
 
 .opcoes {
     display: grid;
@@ -88,38 +85,60 @@ main {
 }
 
 .opcoes label {
-    background-color: #fff2f2;
+    display: flex;
+    align-items: center;
 
-    padding: 12px;
+    gap: 8px;
 
-    border-radius: 8px;
+    padding: 13px;
+
+    background-color: var(--rosa-suave);
+
+    color: var(--texto);
+
+    border: 1px solid var(--borda);
+    border-radius: 10px;
 
     cursor: pointer;
+
+    transition: 0.2s;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
+.opcoes label:hover {
+    border-color: var(--rosa-principal);
 }
 
-form > label {
-    margin-bottom: 7px;
+.opcoes input[type="checkbox"] {
+    accent-color: var(--rosa-principal);
 }
 
-select,
-textarea,
-input[type="range"] {
-    margin-bottom: 20px;
-}
+
+/* CAMPOS */
 
 select,
 textarea {
+    width: 100%;
+
     padding: 12px;
 
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    margin-bottom: 20px;
 
-    background-color: #f8f8f8;
+    color: var(--texto);
+
+    background-color: var(--branco);
+
+    border: 1px solid var(--borda);
+    border-radius: 9px;
+
+    outline: none;
+}
+
+select:focus,
+textarea:focus {
+    border-color: var(--rosa-principal);
+
+    box-shadow:
+        0 0 0 3px rgba(79, 124, 118, 0.12);
 }
 
 textarea {
@@ -127,42 +146,149 @@ textarea {
     resize: vertical;
 }
 
+textarea::placeholder {
+    color: var(--texto-claro);
+}
+
+
+/* BARRA DE DESCONFORTO */
+
+input[type="range"] {
+    width: 100%;
+
+    margin: 5px 0 10px;
+
+    accent-color: var(--rosa-principal);
+}
+
+form p {
+    color: var(--texto-claro);
+
+    margin-bottom: 20px;
+}
+
+
+/* BOTÃO */
+
 button {
     width: 160px;
 
     padding: 11px;
 
-    background-color: #e87f82;
+    background-color: var(--rosa-principal);
+
     color: white;
 
     border: none;
-    border-radius: 6px;
+    border-radius: 9px;
 
     cursor: pointer;
+
+    font-weight: 600;
+
+    transition: 0.2s;
 }
 
 button:hover {
-    background-color: #dc7074;
+    background-color: var(--rosa-escuro);
+
+    transform: translateY(-1px);
 }
+
+
+/* MENSAGEM */
 
 #mensagem {
     margin-top: 15px;
 
-    color: #d96d72;
+    color: var(--rosa-principal);
+
     font-weight: bold;
 }
 
+
+/* HISTÓRICO */
+
 .registro-sintoma {
-    background-color: #fff7f7;
+    background-color: var(--rosa-suave);
+
+    color: var(--texto);
 
     padding: 18px;
 
     margin-bottom: 15px;
 
-    border-left: 4px solid #e87f82;
-    border-radius: 8px;
+    border-left: 4px solid var(--rosa-principal);
+    border-radius: 10px;
 }
 
 .registro-sintoma p {
     margin-bottom: 6px;
+
+    color: var(--texto);
+}
+
+.registro-sintoma strong {
+    color: var(--vinho);
+}
+
+
+/* MODO ESCURO */
+
+html[data-theme="dark"] .registro,
+html[data-theme="dark"] .historico {
+    background-color: var(--branco);
+}
+
+html[data-theme="dark"] .opcoes label {
+    background-color: var(--rosa-suave);
+    color: var(--texto);
+}
+
+html[data-theme="dark"] select,
+html[data-theme="dark"] textarea {
+    background-color: #202b29;
+    color: #edf3f1;
+}
+
+html[data-theme="dark"] select option {
+    background-color: #202b29;
+    color: #edf3f1;
+}
+
+html[data-theme="dark"] textarea::placeholder {
+    color: #8fa09c;
+}
+
+html[data-theme="dark"] .registro-sintoma {
+    background-color: var(--rosa-suave);
+    color: var(--texto);
+}
+
+html[data-theme="dark"] .registro-sintoma p {
+    color: var(--texto);
+}
+
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+
+    main {
+        width: 92%;
+    }
+
+    .registro,
+    .historico {
+        padding: 22px;
+    }
+
+    .opcoes {
+        grid-template-columns: 1fr;
+    }
+
+    button {
+        width: 100%;
+    }
+
 }
