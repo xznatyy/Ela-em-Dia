@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Meu Anticoncepcional - Ela em Dia</title>
+    <title>Anticoncepcional - Ela em Dia</title>
 
-    <link rel="stylesheet" href="css/anticoncepcional.css">
     <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/anticoncepcional.css">
+
+    <link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#4f7c76">
 </head>
 
 <body>
@@ -33,14 +38,14 @@
         <button
             class="tema-botao"
             id="temaBotao"
-            aria-label="Alterar tema">
+            type="button">
             🌙
         </button>
 
         <button
             class="menu-botao"
             id="menuBotao"
-            aria-label="Abrir menu">
+            type="button">
             ☰
         </button>
 
@@ -51,27 +56,49 @@
 <main>
 
     <section class="titulo">
-        <h2>Meu Anticoncepcional 💊</h2>
-        <p>Organize e acompanhe sua rotina diária.</p>
+
+        <h2>Meu anticoncepcional 💊</h2>
+
+        <p>
+            Acompanhe sua rotina diária de forma simples.
+        </p>
+
     </section>
 
-    <section class="card-status">
 
-        <p>Próxima dose</p>
+    <section class="medicamento-card">
 
-        <h2 id="horarioExibido">Nenhum horário cadastrado</h2>
+        <div>
 
-        <button id="botaoTomei">
-            Tomei hoje ✓
+            <span class="rotulo">
+                ANTICONCEPCIONAL
+            </span>
+
+            <h2 id="nomeExibido">
+                Nenhum cadastrado
+            </h2>
+
+            <p>
+                Lembrete diário •
+                <strong id="horarioExibido">
+                    --
+                </strong>
+            </p>
+
+        </div>
+
+        <button id="editarMedicamento">
+            Editar
         </button>
 
-        <p id="statusDose"></p>
-
     </section>
 
-    <section class="cadastro">
 
-        <h3>Cadastrar anticoncepcional</h3>
+    <section
+        class="configuracao"
+        id="configuracao">
+
+        <h3>Configurar anticoncepcional</h3>
 
         <form id="formAnticoncepcional">
 
@@ -82,12 +109,12 @@
             <input
                 type="text"
                 id="nomeMedicamento"
-                placeholder="Ex: Nome do anticoncepcional"
+                placeholder="Nome do anticoncepcional"
                 required
             >
 
             <label for="horario">
-                Horário diário
+                Horário do lembrete
             </label>
 
             <input
@@ -104,23 +131,104 @@
 
     </section>
 
+
+    <section class="hoje-card">
+
+        <div>
+
+            <span>HOJE</span>
+
+            <h3 id="dataHoje"></h3>
+
+            <p id="statusHoje">
+                Dose ainda não registrada.
+            </p>
+
+        </div>
+
+        <button id="botaoTomei">
+            Marcar como tomado
+        </button>
+
+    </section>
+
+
+    <section class="calendario-card">
+
+        <div class="calendario-topo">
+
+            <button
+                class="botao-mes"
+                id="mesAnterior">
+                ‹
+            </button>
+
+            <h3 id="tituloMes"></h3>
+
+            <button
+                class="botao-mes"
+                id="proximoMes">
+                ›
+            </button>
+
+        </div>
+
+
+        <div class="dias-semana">
+
+            <span>D</span>
+            <span>S</span>
+            <span>T</span>
+            <span>Q</span>
+            <span>Q</span>
+            <span>S</span>
+            <span>S</span>
+
+        </div>
+
+
+        <div
+            class="calendario"
+            id="calendario">
+        </div>
+
+    </section>
+
+
+    <section class="legenda">
+
+        <span>
+            <i class="circulo tomado"></i>
+            Registrado
+        </span>
+
+        <span>
+            <i class="circulo pendente"></i>
+            Não registrado
+        </span>
+
+    </section>
+
+
     <section class="aviso">
 
-        <h3>Importante</h3>
+        <strong>Importante</strong>
 
         <p>
-            As orientações em caso de esquecimento podem variar
-            conforme o medicamento. Consulte a bula ou um
-            profissional de saúde.
+            Esta ferramenta ajuda apenas na organização
+            da rotina. Em caso de esquecimento, siga as
+            orientações da bula ou de um profissional de saúde.
         </p>
 
     </section>
 
 </main>
 
+
 <script src="js/anticoncepcional.js"></script>
 <script src="js/menu.js"></script>
 <script src="js/tema.js"></script>
+<script src="js/pwa.js"></script>
 
 </body>
 </html>
