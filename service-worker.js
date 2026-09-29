@@ -1,4 +1,4 @@
-const CACHE_NAME = "ela-em-dia-v1";
+const CACHE_NAME = "ela-em-dia-v2";
 
 const arquivos = [
     "./",

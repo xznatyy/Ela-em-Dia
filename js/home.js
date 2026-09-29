@@ -1,3 +1,37 @@
+async function carregarUsuario() {
+
+    try {
+
+        const resposta = await fetch("/api/me");
+
+        if (!resposta.ok) {
+
+            window.location.href = "index.html";
+            return;
+        }
+
+        const resultado = await resposta.json();
+
+        const nomeCompleto = resultado.usuario.nome;
+
+        const primeiroNome = nomeCompleto.split(" ")[0];
+
+        document.getElementById(
+            "boasVindas"
+        ).textContent = `Olá, ${primeiroNome}! 🌷`;
+
+    } catch (erro) {
+
+        console.error(
+            "Erro ao carregar usuário:",
+            erro
+        );
+
+    }
+
+}
+
+carregarUsuario();
 // ANTICONCEPCIONAL
 
 const horarioAnticoncepcional =
